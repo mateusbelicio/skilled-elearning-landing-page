@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the info card component.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+.info-card {
+  position: absolute;
+  background-color: clr('neutral', 100);
+  border-radius: to-rem(10);
+  padding: to-rem(16) to-rem(20);
+  box-shadow: $shadow;
+
+  font-size: to-rem(14);
+  font-weight: 600;
+  line-height: 2;
+
+  @include breakpoint('large') {
+    padding: to-rem(20) to-rem(24);
+  }
+
+  &__title {
+    display: block;
+  }
+
+  &__value {
+    font-size: to-rem(32);
+    font-weight: 800;
+    line-height: normal;
+    color: clr('neutral', 600);
+  }
+
+  &--bottom {
+    left: to-rem(-38);
+    bottom: to-rem(-24);
+    padding-right: to-rem(45);
+    animation: fadeInBlurToRight 1s ease-out both;
+    transition: left 0.5s ease, bottom 0.5s ease;
+
+    @include breakpoint('small') {
+      left: to-rem(-48);
+    }
+
+    @include breakpoint('large') {
+      padding-right: to-rem(72);
+      bottom: to-rem(98);
+      left: to-rem(-120);
+    }
+  }
+
+  &--top {
+    top: to-rem(-24);
+    right: to-rem(-38);
+    animation: fadeInBlurToLeft 1s ease-out both;
+    transition: right 0.5s ease, top 0.5s ease;
+
+    @include breakpoint('small') {
+      right: to-rem(-52);
+      top: to-rem(-14);
+    }
+
+    @include breakpoint('large') {
+      padding-right: to-rem(58);
+      top: to-rem(102);
+      right: to-rem(-120);
+    }
+  }
+}

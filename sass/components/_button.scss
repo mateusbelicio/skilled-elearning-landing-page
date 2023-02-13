@@ -10,18 +10,19 @@
   line-height: 1;
   cursor: pointer;
 
-  padding: to-rem(16) to-rem(24);
   background: clr('neutral', 600);
+  border: none;
+  border-radius: to-rem(50);
   color: clr('neutral', 100);
+  padding: to-rem(16) to-rem(24);
 
   &:hover {
     background: clr('neutral', 500);
   }
 
-  @include breakpoint('medium') {
+  @include breakpoint('large') {
     font-size: to-rem(18);
-    line-height: 1.5556;
-    padding: to-rem(18) to-rem(32);
+    padding: to-rem(19) to-rem(32);
   }
 
   &--pink {
@@ -32,7 +33,7 @@
       background: clr('gradient', 'white'), clr('gradient', 'pink');
     }
 
-    @include breakpoint('medium') {
+    @include breakpoint('large') {
       padding: to-rem(22) to-rem(32);
     }
   }

@@ -12,15 +12,13 @@
 </head>
 <body>
 
-  <header class="header">
-    <div class="header__bar container">
-      <div class="flex">
-        <img class="header__logo" src="assets/logo-dark.svg" alt="" aria-hidden="true">
-        <button class="btn">Get Started</button>
-      </div>
+  <header class="header container">
+    <div class="header__bar flex">
+      <img class="header__logo" src="assets/logo-dark.svg" alt="" aria-hidden="true">
+      <button class="btn">Get Started</button>
     </div>
 
-    <div class="header__hero grid-container">
+    <div class="header__hero">
       <div class="header__text-content">
         <h1 class="header__title heading--1">Maximize skill, minimize budget</h1>
         <p class="header__subtitle">
@@ -29,73 +27,85 @@
         </p>
         <button class="btn btn--pink">Get Started</button>
       </div>
-      <picture class="header__image">
-        <source srcset="assets/image-hero-desktop.webp 1x, assets/image-hero-desktop@2x.webp 2x" 
-                media="(min-width: 50em)">
-        <source srcset="assets/image-hero-tablet.webp 1x, assets/image-hero-tablet@2x.webp 2x" 
-                media="(min-width: 37.6em)">
-        <img srcset="assets/image-hero-mobile.webp 1x, assets/image-hero-mobile@2x.webp 2x"
-             alt="A beautiful woman drinking some coffee and watching courses on computer">
-      </picture>
+      <div class="header__image">
+
+        <picture>
+          <source srcset="assets/image-hero-desktop.webp" media="(min-width: 62.5em)">
+          <source srcset="assets/image-hero-tablet.webp" media="(min-width: 37.6em)">
+          <img src="assets/image-hero-mobile.webp"
+               alt="A beautiful woman drinking some coffee and watching courses on computer">
+        </picture>
+
+        <span class="info-card info-card--top">
+          <span class="info-card__title">Members</span>
+          <span class="info-card__value">29k</span>
+        </span>
+        <span class="info-card info-card--bottom">
+          <span class="info-card__title">Course hours</span>
+          <span class="info-card__value">1,451</span>
+        </span>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="courses grid-container">
-      <h2 class="courses__title heading--2">Check out our most popular courses!</h2>
+    <section class="courses container">
+      <div class="courses__grid">
+        <h2 class="courses__title heading--2">Check out our most popular courses!</h2>
+        
+        <article class="courses__card course">
+          <img class="course__image" src="assets/icon-animation.svg" alt="" aria-hidden="true">
+          <h3 class="course__name heading--3">Animation</h3>
+          <p class="course__description">
+            Learn the latest animation techniques to create stunning motion 
+            design and captivate your audience.
+          </p>
+          <a href="#" class="course__link">Get Started</a>
+        </article>
+        
+        <article class="courses__card course">
+          <img class="course__image" src="assets/icon-design.svg" alt="" aria-hidden="true">
+          <h3 class="course__name heading--3">Design</h3>
+          <p class="course__description">
+            Create beautiful, usable interfaces to help shape the future of 
+            how the web looks.
+          </p>
+          <a href="#" class="course__link">Get Started</a>
+        </article>
+        
+        <article class="courses__card course">
+          <img class="course__image" src="assets/icon-photography.svg" alt="" aria-hidden="true">
+          <h3 class="course__name heading--3">Photography</h3>
+          <p class="course__description">
+            Explore critical fundamentals like lighting, composition, and focus 
+            to capture exceptional photos.
+          </p>
+          <a href="#" class="course__link">Get Started</a>
+        </article>
 
-      <article class="courses__card course">
-        <img class="course__image" src="assets/icon-animation.svg" alt="" aria-hidden="true">
-        <h3 class="course__name heading--3">Animation</h3>
-        <p class="course__description">
-          Learn the latest animation techniques to create stunning motion 
-          design and captivate your audience.
-        </p>
-        <a href="#" class="course__link">Get Started</a>
-      </article>
-
-      <article class="courses__card course">
-        <img class="course__image" src="assets/icon-design.svg" alt="" aria-hidden="true">
-        <h3 class="course__name heading--3">Design</h3>
-        <p class="course__description">
-          Create beautiful, usable interfaces to help shape the future of 
-          how the web looks.
-        </p>
-        <a href="#" class="course__link">Get Started</a>
-      </article>
-
-      <article class="courses__card course">
-        <img class="course__image" src="assets/icon-photography.svg" alt="" aria-hidden="true">
-        <h3 class="course__name heading--3">Photography</h3>
-        <p class="course__description">
-          Explore critical fundamentals like lighting, composition, and focus 
-          to capture exceptional photos.
-        </p>
-        <a href="#" class="course__link">Get Started</a>
-      </article>
-
-      <article class="courses__card course">
-        <img class="course__image" src="assets/icon-crypto.svg" alt="" aria-hidden="true">
-        <h3 class="course__name heading--3">Crypto</h3>
-        <p class="course__description">
-          All you need to know to get started investing in crypto. Go from beginner 
-          to advanced with this 54 hour course.
-        </p>
-        <a href="#" class="course__link">Get Started</a>
-      </article>
-
-      <article class="courses__card course">
-        <img class="course__image" src="assets/icon-business.svg" alt="" aria-hidden="true">
-        <h3 class="course__name heading--3">Business</h3>
-        <p class="course__description">
-          A step-by-step playbook to help you start, scale, and sustain your business 
-          without outside investment.
-        </p>
-        <a href="#" class="course__link">Get Started</a>
-      </article>
+        <article class="courses__card course">
+          <img class="course__image" src="assets/icon-crypto.svg" alt="" aria-hidden="true">
+          <h3 class="course__name heading--3">Crypto</h3>
+          <p class="course__description">
+            All you need to know to get started investing in crypto. Go from beginner 
+            to advanced with this 54 hour course.
+          </p>
+          <a href="#" class="course__link">Get Started</a>
+        </article>
+        
+        <article class="courses__card course">
+          <img class="course__image" src="assets/icon-business.svg" alt="" aria-hidden="true">
+          <h3 class="course__name heading--3">Business</h3>
+          <p class="course__description">
+            A step-by-step playbook to help you start, scale, and sustain your business 
+            without outside investment.
+          </p>
+          <a href="#" class="course__link">Get Started</a>
+        </article>
+      </div>
     </section>
   </main>
-
+  
   <footer class="footer container">
     <div class="flex">
       <img class="footer__logo" src="assets/logo-light.svg" alt="" aria-hidden="true">

@@ -20,14 +20,17 @@
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  $padding-inline: to-rem(16);
-  $min-width: to-rem(320);
+  --padding-inline: #{to-rem(16)};
+
+  @include breakpoint('small') {
+    --padding-inline: #{to-rem(40)};
+  }
 
   display: grid;
   grid-template-columns:
-    [full-start] minmax($padding-inline, 1fr) [center-start]
-    minmax($min-width, $max-width)
-    [center-end] minmax($padding-inline, 1fr) [full-end];
+    [full-start] minmax(var(--padding-inline), 1fr) [center-start]
+    minmax(0, $max-width)
+    [center-end] minmax(var(--padding-inline), 1fr) [full-end];
 
   & > * {
     grid-column: center;
@@ -52,6 +55,10 @@
   & > * {
     grid-column: center;
   }
+}
+
+.flex {
+  display: flex;
 }
 
 /**

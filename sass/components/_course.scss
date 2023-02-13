@@ -1,0 +1,52 @@
+// This file contains all styles related to the course card component.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+.course {
+  position: relative;
+  padding: to-rem(56) to-rem(28) to-rem(32);
+  box-shadow: $shadow-smooth;
+  border-radius: to-rem(10);
+  background-color: clr('neutral', 100);
+
+  display: flex;
+  flex-direction: column;
+  gap: to-rem(16);
+
+  @include breakpoint('small') {
+    padding: to-rem(56) to-rem(32) to-rem(32);
+  }
+
+  @include breakpoint('large') {
+    gap: to-rem(24);
+    padding: to-rem(64) to-rem(32) to-rem(40);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
+  &__description {
+    margin-bottom: to-rem(8);
+
+    @include breakpoint('small') {
+      margin-bottom: auto;
+    }
+  }
+
+  &__link {
+    font-size: to-rem(18);
+    font-weight: 600;
+    line-height: 1.5556;
+    text-decoration: none;
+    color: clr('primary');
+    transition: color 0.2s;
+
+    &:hover {
+      color: clr('primary', 300);
+    }
+  }
+}

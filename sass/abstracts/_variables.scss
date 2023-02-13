@@ -25,11 +25,14 @@ $colors: (
     600: #13183f,
   ),
   gradient: (
-    white: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    pink: linear-gradient(to top, #f02aa6, #ff6f48),
-    violet: linear-gradient(to top, #f02aa6, #4851ff),
+    'white': linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    'pink': linear-gradient(to top, #f02aa6, #ff6f48),
+    'violet': linear-gradient(to top, #f02aa6, #4851ff),
   ),
 );
+
+$shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+$shadow-smooth: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length

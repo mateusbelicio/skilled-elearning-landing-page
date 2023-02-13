@@ -3,3 +3,18 @@
 // -----------------------------------------------------------------------------
 
 @use '../abstracts/' as *;
+
+/* FOOTER */
+.footer {
+  padding-block: to-rem(36);
+  background-color: clr('neutral', 600);
+
+  @include breakpoint('small') {
+    padding-block: to-rem(32);
+  }
+
+  .flex {
+    align-items: center;
+    justify-content: space-between;
+  }
+}

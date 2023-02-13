@@ -1,0 +1,22 @@
+{
+  "name": "skilled-elearning-landing-page",
+  "version": "1.0.0",
+  "description": "This is a solution to the Skilled e-learning landing page challenge on Frontend Mentor.",
+  "main": "index.js",
+  "scripts": {
+    "w:sass": "sass --watch sass/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusbelicio/skilled-elearning-landing-page.git"
+  },
+  "author": "Mateus Belício",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateusbelicio/skilled-elearning-landing-page/issues"
+  },
+  "homepage": "https://github.com/mateusbelicio/skilled-elearning-landing-page",
+  "devDependencies": {
+    "sass": "^1.58.0"
+  }
+}

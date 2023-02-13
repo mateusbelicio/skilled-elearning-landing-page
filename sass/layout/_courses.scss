@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the courses section of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+/* COURSES SECTION */
+
+.courses {
+  background: linear-gradient(to bottom, #ffffff, #f0f1ff);
+  padding-bottom: to-rem(80);
+
+  @include breakpoint('large') {
+    padding-bottom: to-rem(140);
+  }
+
+  &__grid {
+    display: grid;
+    row-gap: to-rem(40);
+
+    @include breakpoint('small') {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: to-rem(10);
+      row-gap: to-rem(52);
+    }
+
+    @include breakpoint('large') {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: to-rem(30);
+      row-gap: to-rem(80);
+    }
+  }
+
+  &__title {
+    color: clr('neutral', 100);
+    background: clr('gradient', 'pink');
+    border-radius: to-rem(10);
+    padding: to-rem(24) to-rem(28) to-rem(32);
+
+    @include breakpoint('small') {
+      padding: to-rem(56) to-rem(32);
+    }
+
+    @include breakpoint('large') {
+      padding: to-rem(64) to-rem(32);
+    }
+  }
+}

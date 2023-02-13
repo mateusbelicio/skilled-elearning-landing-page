@@ -3,3 +3,91 @@
 // -----------------------------------------------------------------------------
 
 @use '../abstracts/' as *;
+
+/* HEADER */
+
+.header {
+  padding-bottom: to-rem(90);
+  overflow-x: hidden;
+
+  @include breakpoint('small') {
+    padding-bottom: to-rem(134);
+  }
+
+  &__hero {
+    display: grid;
+    row-gap: to-rem(70);
+    column-gap: to-rem(24);
+    align-items: center;
+
+    @include breakpoint('small') {
+      grid-template-columns: minmax(auto, to-rem(400)) minmax(max-content, 1fr);
+    }
+
+    @include breakpoint('large') {
+      grid-template-columns: minmax(auto, to-rem(460)) minmax(max-content, 1fr);
+    }
+  }
+
+  &__subtitle {
+    width: 95%;
+  }
+
+  &__image {
+    justify-self: center;
+    position: relative;
+    transition: transform 0.5s;
+
+    @include breakpoint('small') {
+      &::before {
+        content: '';
+        display: block;
+        background: clr('gradient', 'violet');
+        border-radius: to-rem(1000);
+        aspect-ratio: 1 / 5;
+        width: 100%;
+
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        transform: rotate(45deg) translateY(-5%);
+        transform-origin: bottom;
+        z-index: z('below');
+
+        animation: fadeIn 1s ease-out both;
+      }
+    }
+
+    @include breakpoint(1400) {
+      transform: translateX(to-rem(100));
+    }
+  }
+
+  &__bar {
+    padding-block: to-rem(16) to-rem(38);
+
+    @include breakpoint('small') {
+      padding-block: to-rem(24) to-rem(50);
+    }
+
+    @include breakpoint('large') {
+      padding-block: to-rem(24) to-rem(86);
+    }
+
+    justify-content: space-between;
+    align-items: center;
+    gap: to-rem(24);
+
+    & > * {
+      flex-shrink: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: to-rem(24);
+
+    @include breakpoint('large') {
+      margin-bottom: to-rem(40);
+    }
+  }
+}

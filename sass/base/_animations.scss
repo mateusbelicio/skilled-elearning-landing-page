@@ -1,0 +1,58 @@
+@use '../abstracts/' as *;
+
+/* Keyframes definitions */
+
+@keyframes floating {
+  25% {
+    transform: translateY(-10%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0;
+    filter: blur(to-rem(24));
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    filter: none;
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes fadeInBlurToLeft {
+  0% {
+    transform: translateX(100%);
+    filter: blur(to-rem(24));
+    opacity: 0;
+  }
+  50% {
+    filter: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBlurToRight {
+  0% {
+    transform: translateX(-100%);
+    filter: blur(to-rem(24));
+    opacity: 0;
+  }
+  50% {
+    filter: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
