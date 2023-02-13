@@ -6,48 +6,101 @@
   <meta name="description" content="Challenge by Frontend Mentor. Coded by Mateus Belício.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Skilled e-learning landing page</title>
 </head>
 <body>
 
-  Get Started
+  <header class="header">
+    <div class="header__bar container">
+      <div class="flex">
+        <img class="header__logo" src="assets/logo-dark.svg" alt="" aria-hidden="true">
+        <button class="btn">Get Started</button>
+      </div>
+    </div>
 
-  Maximize skill, minimize budget
+    <div class="header__hero grid-container">
+      <div class="header__text-content">
+        <h1 class="header__title heading--1">Maximize skill, minimize budget</h1>
+        <p class="header__subtitle">
+          Our modern courses across a range of in-demand skills will give you the 
+          knowledge you need to live the life you want.
+        </p>
+        <button class="btn btn--pink">Get Started</button>
+      </div>
+      <picture class="header__image">
+        <source srcset="assets/image-hero-desktop.webp 1x, assets/image-hero-desktop@2x.webp 2x" 
+                media="(min-width: 50em)">
+        <source srcset="assets/image-hero-tablet.webp 1x, assets/image-hero-tablet@2x.webp 2x" 
+                media="(min-width: 37.6em)">
+        <img srcset="assets/image-hero-mobile.webp 1x, assets/image-hero-mobile@2x.webp 2x"
+             alt="A beautiful woman drinking some coffee and watching courses on computer">
+      </picture>
+    </div>
+  </header>
 
-  Our modern courses across a range of in-demand skills will give you the 
-  knowledge you need to live the life you want.
+  <main>
+    <section class="courses grid-container">
+      <h2 class="courses__title heading--2">Check out our most popular courses!</h2>
 
-  Get Started
+      <article class="courses__card course">
+        <img class="course__image" src="assets/icon-animation.svg" alt="" aria-hidden="true">
+        <h3 class="course__name heading--3">Animation</h3>
+        <p class="course__description">
+          Learn the latest animation techniques to create stunning motion 
+          design and captivate your audience.
+        </p>
+        <a href="#" class="course__link">Get Started</a>
+      </article>
 
-  Check out our most popular courses!
+      <article class="courses__card course">
+        <img class="course__image" src="assets/icon-design.svg" alt="" aria-hidden="true">
+        <h3 class="course__name heading--3">Design</h3>
+        <p class="course__description">
+          Create beautiful, usable interfaces to help shape the future of 
+          how the web looks.
+        </p>
+        <a href="#" class="course__link">Get Started</a>
+      </article>
 
-  Animation
-  Learn the latest animation techniques to create stunning motion 
-  design and captivate your audience.
-  Get Started
+      <article class="courses__card course">
+        <img class="course__image" src="assets/icon-photography.svg" alt="" aria-hidden="true">
+        <h3 class="course__name heading--3">Photography</h3>
+        <p class="course__description">
+          Explore critical fundamentals like lighting, composition, and focus 
+          to capture exceptional photos.
+        </p>
+        <a href="#" class="course__link">Get Started</a>
+      </article>
 
-  Design
-  Create beautiful, usable interfaces to help shape the future of 
-  how the web looks.
-  Get Started
+      <article class="courses__card course">
+        <img class="course__image" src="assets/icon-crypto.svg" alt="" aria-hidden="true">
+        <h3 class="course__name heading--3">Crypto</h3>
+        <p class="course__description">
+          All you need to know to get started investing in crypto. Go from beginner 
+          to advanced with this 54 hour course.
+        </p>
+        <a href="#" class="course__link">Get Started</a>
+      </article>
 
-  Photography
-  Explore critical fundamentals like lighting, composition, and focus 
-  to capture exceptional photos.
-  Get Started
+      <article class="courses__card course">
+        <img class="course__image" src="assets/icon-business.svg" alt="" aria-hidden="true">
+        <h3 class="course__name heading--3">Business</h3>
+        <p class="course__description">
+          A step-by-step playbook to help you start, scale, and sustain your business 
+          without outside investment.
+        </p>
+        <a href="#" class="course__link">Get Started</a>
+      </article>
+    </section>
+  </main>
 
-  Crypto
-  All you need to know to get started investing in crypto. Go from beginner 
-  to advanced with this 54 hour course.
-  Get Started
-
-  Business
-  A step-by-step playbook to help you start, scale, and sustain your business 
-  without outside investment.
-  Get Started
-
-  Get Started
-
+  <footer class="footer container">
+    <div class="flex">
+      <img class="footer__logo" src="assets/logo-light.svg" alt="" aria-hidden="true">
+      <button class="btn btn--violet">Get Started</button>
+    </div>
+  </footer>
 </body>
 </html>
