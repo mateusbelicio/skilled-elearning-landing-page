@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+@use '../abstracts/' as *;
+
+.btn {
+  font-size: to-rem(16);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+
+  padding: to-rem(16) to-rem(24);
+  background: clr('neutral', 600);
+  color: clr('neutral', 100);
+
+  &:hover {
+    background: clr('neutral', 500);
+  }
+
+  @include breakpoint('medium') {
+    font-size: to-rem(18);
+    line-height: 1.5556;
+    padding: to-rem(18) to-rem(32);
+  }
+
+  &--pink {
+    padding: to-rem(20) to-rem(38);
+    background: clr('gradient', 'pink');
+
+    &:hover {
+      background: clr('gradient', 'white'), clr('gradient', 'pink');
+    }
+
+    @include breakpoint('medium') {
+      padding: to-rem(22) to-rem(32);
+    }
+  }
+
+  &--violet {
+    background: clr('gradient', 'violet');
+
+    &:hover {
+      background: clr('gradient', 'white'), clr('gradient', 'violet');
+    }
+  }
+}

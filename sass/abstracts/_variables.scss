@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+/// Main font family
+$ff-primary: 'Plus Jakarta Sans', sans-serif;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 69.375rem !default;
+
+$colors: (
+  primary: (
+    300: #ffa7c3,
+    400: #f74780,
+    500: #f62366,
+  ),
+  neutral: (
+    100: #ffffff,
+    300: #d1d1d1,
+    400: #83869a,
+    500: #666ca3,
+    600: #13183f,
+  ),
+  gradient: (
+    white: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    pink: linear-gradient(to top, #f02aa6, #ff6f48),
+    violet: linear-gradient(to top, #f02aa6, #4851ff),
+  ),
+);
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 37.6em,
+  'medium': 50em,
+  'large': 62.5em,
+) !default;
+
+/// Z-indexes map, gathering all Z layers of the application
+/// @access private
+/// @type Map
+/// @prop {String} key - Layer’s name
+/// @prop {Number} value - Z value mapped to the key
+$z-indexes: (
+  'above': 600,
+  'modal': 500,
+  'dropdown': 400,
+  'default': 1,
+  'below': -1,
+);

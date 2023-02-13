@@ -1,0 +1,53 @@
+/**
+ * Basic typography style for copy text
+ */
+
+@use '../abstracts/' as *;
+
+body {
+  font-size: to-rem(16);
+  font-family: $ff-primary;
+  line-height: 1.625;
+  color: clr('neutral', 500);
+}
+
+*[class^='heading'] {
+  font-family: $ff-primary;
+  font-weight: 800;
+}
+
+.heading--1 {
+  font-size: to-rem(40);
+  line-height: 1.275;
+}
+
+.heading--2 {
+  font-size: to-rem(24);
+  line-height: 1.3333;
+}
+
+.heading--3 {
+  font-size: to-rem(20);
+  line-height: auto;
+}
+
+@include breakpoint('medium') {
+  body {
+    font-size: to-rem(18);
+    line-height: 1.5556;
+  }
+
+  .heading--1 {
+    font-size: to-rem(56);
+    line-height: 1.25;
+  }
+
+  .heading--2 {
+    font-size: to-rem(32);
+    line-height: 1.25;
+  }
+
+  .heading--3 {
+    font-size: to-rem(24);
+  }
+}
