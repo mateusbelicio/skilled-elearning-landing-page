@@ -16,7 +16,9 @@
   line-height: 2;
 
   @include breakpoint('large') {
+    font-size: to-rem(16);
     padding: to-rem(20) to-rem(24);
+    line-height: 1.75;
   }
 
   &__title {
@@ -28,6 +30,10 @@
     font-weight: 800;
     line-height: normal;
     color: clr('neutral', 600);
+
+    @include breakpoint('large') {
+      font-size: to-rem(40);
+    }
   }
 
   &--bottom {

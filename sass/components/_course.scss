@@ -20,6 +20,7 @@
 
   @include breakpoint('large') {
     gap: to-rem(24);
+    border-radius: to-rem(15);
     padding: to-rem(64) to-rem(32) to-rem(40);
   }
 
